@@ -1,0 +1,256 @@
+ANCHOR
+
+<html>
+<body>
+<a href="test2.html"> click here </a><!-- link to a webpage -->
+<img src="virat.jpg" height="500" width="500"></img><br>
+<font size="5" color="red"> this is a special text</font>
+</body>
+</html>
+-----------------------------------------------------------------------------------
+CSSSTYLE
+<html>
+  <head>
+    <style>
+         body{
+		       background-color:silver;
+			  }
+          p{
+              text-align:center; color:red;
+           }
+          #h1{
+               color: blue;
+             }
+          .h2{
+               color:sienna;
+             }
+    </style>
+</head>
+<body>
+     <p> this is para one </p><br>
+     <h1 id="h1">this is heading h1 </h1>
+     <h2 class="h2">this is head h2</h2>
+</body>
+</html>	 
+---------------------------------------------------------------------
+INPUT TYPES
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <form action="" >
+     Enter name <input type="text" name="empname" required><br>
+	 Select color: <input type="color" name="colour"> <br>
+	 Enter date: <input type="date" name="bdate" required> <br>
+	 Enter Date-time <input type="datetime-local" name="datetime"><br>
+     Enter month&year <input type="month" name="monthyear"> <br>
+     Enter week <input type="week" name="wk"><br>
+	 Enter email <input type="email" name="mailid"> <br>
+	 Enter code(5-10) 
+	  <input type="number" name="code" min="5" max="10"> <br>
+	 Select cost range 500
+	 <input type="range" name="cost" min="500" max="2000">2000<br>
+	 Select city <input list="cities" name="city"> 
+		<datalist id="cities">
+		<option value="hyd">Hyderabad</option>
+		<option value="bglr">Bangalore</option>
+		<option value="del">Delhi</option>
+		</datalist> <br>
+	  <input type="submit">
+	</form>
+	</body>
+ </html>
+ ------------------------------------------------------------------------------------------------------------
+CSS STYLES
+<html>
+  <head>
+    <style>
+	  body{
+	        background-color: silver;
+			}
+		   p{
+		      text-align: centre; color: red;
+			  }
+			 #h1{
+			      text align:centre; color: blue;
+				  }
+				.h2{
+				     color:sienna;
+					 }
+	</style>
+   </head>
+   <body>
+      
+	    <p style="background-color: yellow;"> this is para one </p> <br>
+		<h1 id="h1"> this is heading H1</h1>
+		<h2 class="h2"> this is eading H2</h2>
+		
+	</body>
+</html>
+-------------------------------------------------------------------------------------------------------------
+NEW1
+h1{
+      color:sienna;
+}
+h4{
+      color:blue;
+}
+p{
+      color:red;
+}	
+ body{
+      background-color:pink;
+}	  
+	  
+-----------------------------------------------------------------------------------------------------------------
+NEW11
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="new1.css">
+</head>
+<body>
+<h1> heading 1</h1>
+<h2> heading 2</h2>
+<h4> heading 4</h4>
+<p> a sample paragraph</p><br>
+this is normal text....
+</html>
+---------------------------------------------------------------------------------------------------------------------
+ROW SPAN COL SPAN TABLE
+<html>
+<head>
+<style>
+       body{
+	         background-color:cyan;
+			}
+        .th{
+             color:red;
+            }
+        .tr{
+             color:orange;
+            }
+		.td{ 
+             color:white;
+            }
+        #table{
+             color:green;
+             }
+        .caption{
+             color:purple;
+            }			 
+</style>			 
+         			
+</head>
+<body>
+<table id="table" border ="4" size ="400" bordercolor="brown">
+<caption class="caption" >student table</caption>
+<tr style="background-color:yellow">
+<th rowspan="2">student name </th><!-- student name is common for 2 rows -->
+<th colspan="4">student marks </th><!-- student marks is common for 3 columns -->
+</tr>
+<tr class="tr"><th>sub1</th><th>sub2</th><th>sub3</th><th>total</th></tr>
+<tr><td>deloitte</td><td>55</td><td>56</td><td>57</td><td class="td">168</td></tr>
+<tr><td>deloitte</td><td>55</td><td>56</td><td>57</td><td class="td">168</td></tr>
+<tr><td>deloitte</td><td>55</td><td>56</td><td>57</td><td class="td">168</td></tr>
+</table>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------
+TABLE
+<html>
+<body>
+<table border="4" size ="300">
+<caption> sample table</caption>
+<tr><!-- tr is table row -->
+<th> employee code</th><!--th is table header,,,bold and centered -->
+<th> employee name</th>
+<th> employee sal</th>
+</tr>
+<tr><td>1234 </td><td>deloitte</td><td>56000</td><tr><!--td is table data -->
+<tr><td>1234 </td><td>deloitte</td><td>56000</td><tr>
+<tr><td>1234 </td><td>deloitte</td><td>56000</td><tr>
+</table>
+</body>
+</html>
+---------------------------------------------------------------
+TEST1
+<html>
+   <head>
+         <title> this is title </title>
+	</head>
+    <body>
+        this is a web page
+        <h1> heading 1 </h1>		
+		 <h2> heading 2 </h2>	
+		  <h3> heading 3 </h3>	
+		   <h4> heading 4 </h4>	
+		    <h5> heading 5 </h5>	
+			 <h6> heading 6 </h6>	
+			 <b> bold faced text </b><br>
+			 <i> italic </i> <br>
+			 <u> underline</u><br>
+			 <b><i><u> bold italic underline </b></i></u><br>
+			 <p> paragraph </p>
+</html>			 
+--------------------------------------------------------------------------------------------------------------------------
+TEST 2
+<html>
+<body bgcolor="cyan">
+<ol type="I"><!-- ordered list -->
+<li> thumsup<!--list -->
+<li> pepsi
+<li> coke
+</ol> <br>
+<ul><!-- unordered list -->
+<li> thumsup
+<li> pepsi
+<li> coke
+</ul>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+<html>
+<body bgcolor="cyan">
+<ol type="I"><!-- ordered list -->
+<li> thumsup<!--list -->
+<li> pepsi
+<li> coke
+</ol> <br>
+<ul><!-- unordered list -->
+<li> thumsup
+<li> pepsi
+<li> coke
+</ul>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------
+UNDEFINED PAGE
+<html>
+<body>
+<form action="test2.html" method="get">
+             enter name<input type="text" name="empname" value="your name" readonly="readonly"><br>
+			 enter pasword<input type="password" name="pwd"><br>
+			 experince <textarea rown="2" cols="40" name="exp"></textarea><br>
+			 technologies<input type="checkbox" name="tech" value="java">java
+			             <input type="checkbox" name="tech" value="oracle">oracle
+						 <input type="checkbox" name="tech" value="css">css<br>
+			marital status<input type= "radio" name="status" value="single">single			
+			              <input type= "radio" name="status" value="married">married<br>
+			select month <select name="month">
+                         <option value="jan">january</option>			
+						 <option value="feb">february</option>
+						 <option value="mar">march</option>
+			</select><br>
+        <input type="button" value="button">
+		<input type="submit" value="submit">
+</form>
+</body>
+</html>
+	-----------------------------------------------------------------------------------------------------------------------
