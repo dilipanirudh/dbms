@@ -1,0 +1,1165 @@
+SQL>  select d.deptno,d.dname,e.empno,e.ename,e.deptno from dept d join emp e on d.deptno = e.deptno;
+
+    DEPTNO DNAME               EMPNO ENAME          DEPTNO
+---------- -------------- ---------- ---------- ----------
+        10 ACCOUNTING           7782 CLARK              10
+        10 ACCOUNTING           7839 KING               10
+        10 ACCOUNTING           7934 MILLER             10
+        20 RESEARCH             7566 JONES              20
+        20 RESEARCH             7902 FORD               20
+        20 RESEARCH             7876 ADAMS              20
+        20 RESEARCH             7369 SMITH              20
+        20 RESEARCH             7788 SCOTT              20
+        30 SALES                7521 WARD               30
+        30 SALES                7844 TURNER             30
+        30 SALES                7499 ALLEN              30
+
+    DEPTNO DNAME               EMPNO ENAME          DEPTNO
+---------- -------------- ---------- ---------- ----------
+        30 SALES                7900 JAMES              30
+        30 SALES                7698 BLAKE              30
+        30 SALES                7654 MARTIN             30
+14 rows selected.
+
+SQL> select d.deptno,d.dname,e.empno,e.ename from dept d join emp e on d.deptno = e.deptno;
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        10 ACCOUNTING           7782 CLARK
+        10 ACCOUNTING           7839 KING
+        10 ACCOUNTING           7934 MILLER
+        20 RESEARCH             7566 JONES
+        20 RESEARCH             7902 FORD
+        20 RESEARCH             7876 ADAMS
+        20 RESEARCH             7369 SMITH
+        20 RESEARCH             7788 SCOTT
+        30 SALES                7521 WARD
+        30 SALES                7844 TURNER
+        30 SALES                7499 ALLEN
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        30 SALES                7900 JAMES
+        30 SALES                7698 BLAKE
+        30 SALES                7654 MARTIN
+
+14 rows selected.
+
+SQL>  select d.deptno,d.dname,e.empno,e.ename from dept d right outer join emp e on d.deptno = e.deptno;
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        10 ACCOUNTING           7934 MILLER
+        10 ACCOUNTING           7839 KING
+        10 ACCOUNTING           7782 CLARK
+        20 RESEARCH             7902 FORD
+        20 RESEARCH             7876 ADAMS
+        20 RESEARCH             7788 SCOTT
+        20 RESEARCH             7566 JONES
+        20 RESEARCH             7369 SMITH
+        30 SALES                7900 JAMES
+        30 SALES                7844 TURNER
+        30 SALES                7698 BLAKE
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        30 SALES                7654 MARTIN
+        30 SALES                7521 WARD
+        30 SALES                7499 ALLEN
+
+14 rows selected.
+
+SQL> select d.deptno,d.dname,e.empno,e.ename from dept d left outer join emp e on d.deptno = e.deptno;
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        10 ACCOUNTING           7782 CLARK
+        10 ACCOUNTING           7839 KING
+        10 ACCOUNTING           7934 MILLER
+        20 RESEARCH             7566 JONES
+        20 RESEARCH             7902 FORD
+        20 RESEARCH             7876 ADAMS
+        20 RESEARCH             7369 SMITH
+        20 RESEARCH             7788 SCOTT
+        30 SALES                7521 WARD
+        30 SALES                7844 TURNER
+        30 SALES                7499 ALLEN
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        30 SALES                7900 JAMES
+        30 SALES                7698 BLAKE
+        30 SALES                7654 MARTIN
+        40 OPERATIONS
+
+15 rows selected.
+SQL> select d.deptno,d.dname,e.empno,e.ename from dept d join emp e on d.deptno != e.deptno;
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        10 ACCOUNTING           7369 SMITH
+        10 ACCOUNTING           7499 ALLEN
+        10 ACCOUNTING           7521 WARD
+        10 ACCOUNTING           7566 JONES
+        10 ACCOUNTING           7654 MARTIN
+        10 ACCOUNTING           7698 BLAKE
+        10 ACCOUNTING           7788 SCOTT
+        10 ACCOUNTING           7844 TURNER
+        10 ACCOUNTING           7876 ADAMS
+        10 ACCOUNTING           7900 JAMES
+        10 ACCOUNTING           7902 FORD
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        20 RESEARCH             7499 ALLEN
+        20 RESEARCH             7521 WARD
+        20 RESEARCH             7654 MARTIN
+        20 RESEARCH             7698 BLAKE
+        20 RESEARCH             7782 CLARK
+        20 RESEARCH             7839 KING
+        20 RESEARCH             7844 TURNER
+        20 RESEARCH             7900 JAMES
+        20 RESEARCH             7934 MILLER
+        30 SALES                7369 SMITH
+        30 SALES                7566 JONES
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        30 SALES                7782 CLARK
+        30 SALES                7788 SCOTT
+        30 SALES                7839 KING
+        30 SALES                7876 ADAMS
+        30 SALES                7902 FORD
+        30 SALES                7934 MILLER
+        40 OPERATIONS           7369 SMITH
+        40 OPERATIONS           7499 ALLEN
+        40 OPERATIONS           7521 WARD
+        40 OPERATIONS           7566 JONES
+        40 OPERATIONS           7654 MARTIN
+
+    DEPTNO DNAME               EMPNO ENAME
+---------- -------------- ---------- ----------
+        40 OPERATIONS           7698 BLAKE
+        40 OPERATIONS           7782 CLARK
+        40 OPERATIONS           7788 SCOTT
+        40 OPERATIONS           7839 KING
+        40 OPERATIONS           7844 TURNER
+        40 OPERATIONS           7876 ADAMS
+        40 OPERATIONS           7900 JAMES
+        40 OPERATIONS           7902 FORD
+        40 OPERATIONS           7934 MILLER
+
+42 rows selected.
+
+SQL> select * from student;
+
+     REGNO FIRSTNAME            MIDDLENAME           LASTNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+--------------------------------------------------
+      1001 scott                b                    johnson
+scottbjohnson@gmail.com
+
+      1002 tyler                                     cohen
+tylercohen@gmail.com
+
+      1003 michael              a                    scott
+michaelscott@gmail.com
+
+
+SQL> create sequence regno_seq start with 110 increment by 2 maxvalue 200;
+
+Sequence created.
+
+SQL> insert into student values (regno_seq.nextval,'first','middle','last','first@gmail.com');
+
+1 row created.
+
+SQL> insert into student values(regno_seq.nextval, 'first','middle','last','second@gmail.com');
+
+1 row created.
+
+SQL> select * from student;
+
+     REGNO FIRSTNAME            MIDDLENAME           LASTNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+--------------------------------------------------
+      1001 scott                b                    johnson
+scottbjohnson@gmail.com
+
+      1002 tyler                                     cohen
+tylercohen@gmail.com
+
+      1003 michael              a                    scott
+michaelscott@gmail.com
+
+
+     REGNO FIRSTNAME            MIDDLENAME           LASTNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+--------------------------------------------------
+       110 first                middle               last
+first@gmail.com
+
+       112 first                middle               last
+second@gmail.com
+
+
+SQL> drop sequence regno_seq;
+
+Sequence dropped.
+
+SQL> select * from student;
+
+     REGNO FIRSTNAME            MIDDLENAME           LASTNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+--------------------------------------------------
+      1001 scott                b                    johnson
+scottbjohnson@gmail.com
+
+      1002 tyler                                     cohen
+tylercohen@gmail.com
+
+      1003 michael              a                    scott
+michaelscott@gmail.com
+
+
+     REGNO FIRSTNAME            MIDDLENAME           LASTNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+--------------------------------------------------
+       110 first                middle               last
+first@gmail.com
+
+       112 first                middle               last
+second@gmail.com
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------
+Problem Statement:
+Complete the following assignment:
+ 
+a) Create the table PROGRAMMER with the given information using SQL CREATE TABLE command:  
+
+1
+  
+b) Insert the following data into the PROGRAMMER table: 
+
+2
+ 
+c) Create a table WEATHER with following data:   
+ 
+3
+
+d) Create a table BOOKS with the following data 
+
+  4
+Note: 
+   q  The primary keys and other keys could be assumed if not mentioned.
+ q  When inserting values try using all the 3 different ways to insert data into the table
+
+e)  Write SQL queries to:
+Saurav Gupta is assigned a different project with id NITTS and he would work with C++ now. Update this change in the PROGRAMMER table.
+The books on DBMS are shifted to shelf with number S10. Please update this detail in BOOKS table.
+Supriyo Chaudhury has resigned his job. Incorporate this change in the table PROGRAMMER.
+A new column to state the nature of the climate with either of the value (rainy, cloudy, sunny, snow) is to be added in the WEATHER Table.
+The column TaskNo in the PROGRAMMER Table is no longer needed. Delete the column.
+Delete the table WEATHER from database.
+
+
+--------------------------------------------------------------------------------------------=======--------------------------
+SQL> create table programmer(empno number(5) primary key, projid varchar(5),
+  2  lastname varchar(30) not null, firstname varchar(30) null,
+  3  hiredate date, language varchar(15), taskno number(2), privilege varchar(25));
+
+Table created.
+
+SQL> desc programmer
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(5)
+ PROJID                                             VARCHAR2(5)
+ LASTNAME                                  NOT NULL VARCHAR2(30)
+ FIRSTNAME                                          VARCHAR2(30)
+ HIREDATE                                           DATE
+ LANGUAGE                                           VARCHAR2(15)
+ TASKNO                                             NUMBER(2)
+ PRIVILEGE                                          VARCHAR2(25)
+
+SQL> insert into programmer values(201,'gupta','saurav','1/1/1995','npr','vb',52,'secret');
+insert into programmer values(201,'gupta','saurav','1/1/1995','npr','vb',52,'secret')
+                                                              *
+ERROR at line 1:
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+SQL> drop table programmer;
+
+Table dropped.
+
+SQL> create table programmer(empno number(5) primary key, lastname varchar(30) not null,
+  2  firstname varchar(30) null, hiredate date, projid varchar(6), language varchar(15),
+  3  taskno number(2), privilege varchar(25));
+
+Table created.
+
+SQL> desc programmer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(5)
+ LASTNAME                                  NOT NULL VARCHAR2(30)
+ FIRSTNAME                                          VARCHAR2(30)
+ HIREDATE                                           DATE
+ PROJID                                             VARCHAR2(6)
+ LANGUAGE                                           VARCHAR2(15)
+ TASKNO                                             NUMBER(2)
+ PRIVILEGE                                          VARCHAR2(25)
+
+SQL> insert into programmer values(201,'gupta','saurav','1-jan-95','npr','vb',52,'secret');
+
+1 row created.
+
+SQL> select * from programmer;
+
+     EMPNO LASTNAME                       FIRSTNAME
+---------- ------------------------------ ------------------------------
+HIREDATE  PROJID LANGUAGE            TASKNO PRIVILEGE
+--------- ------ --------------- ---------- -------------------------
+       201 gupta                          saurav
+01-JAN-95 npr    vb                      52 secret
+
+
+SQL> insert into programmer values(390,'ghosh','pinky','1-may-93','kcw','java',11,'top secret');
+
+1 row created.
+
+SQL> update programmer set date = '5-jan-93' where empno = 390;
+update programmer set date = '5-jan-93' where empno = 390
+                      *
+ERROR at line 1:
+ORA-01747: invalid user.table.column, table.column, or column specification
+
+
+SQL> update programmer set hiredate = '5-jan-93' where empno = 390;
+
+1 row updated.
+
+SQL> desc programmer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(5)
+ LASTNAME                                  NOT NULL VARCHAR2(30)
+ FIRSTNAME                                          VARCHAR2(30)
+ HIREDATE                                           DATE
+ PROJID                                             VARCHAR2(6)
+ LANGUAGE                                           VARCHAR2(15)
+ TASKNO                                             NUMBER(2)
+ PRIVILEGE                                          VARCHAR2(25)
+
+SQL> select * from programmer;
+
+     EMPNO LASTNAME                       FIRSTNAME
+---------- ------------------------------ ------------------------------
+HIREDATE  PROJID LANGUAGE            TASKNO PRIVILEGE
+--------- ------ --------------- ---------- -------------------------
+       201 gupta                          saurav
+01-JAN-95 npr    vb                      52 secret
+
+       390 ghosh                          pinky
+05-JAN-93 kcw    java                    11 top secret
+
+SQL> insert into programmer values(789,'agarwal','praveen','31-aug-98','rnc','vb',11,'secret');
+
+1 row created.
+
+SQL> insert into programmer values(134,'chaudhary','supriyo','15-jul-95','tipps','C++',52,'secret');
+
+1 row created.
+
+SQL> insert into programmer values(896,'jha','ranjit','15-jun-97','kcw','java',10,'top secret');
+
+1 row created.
+
+SQL> insert into programmer values(345,'john','peter','15-nov-99','tipps','java',52,'');
+
+
+
+
+
+1 row created.
+
+SQL> insert into programmer values(563,'anderson','andy','15-aug-94','nitts','C++',89,'confidential');
+
+1 row created.
+
+SQL> select * from programmer;
+
+     EMPNO LASTNAME                       FIRSTNAME
+---------- ------------------------------ ------------------------------
+HIREDATE  PROJID LANGUAGE            TASKNO PRIVILEGE
+--------- ------ --------------- ---------- -------------------------
+       201 gupta                          saurav
+01-JAN-95 npr    vb                      52 secret
+
+       390 ghosh                          pinky
+05-JAN-93 kcw    java                    11 top secret
+
+       789 agarwal                        praveen
+31-AUG-98 rnc    vb                      11 secret
+
+
+     EMPNO LASTNAME                       FIRSTNAME
+---------- ------------------------------ ------------------------------
+HIREDATE  PROJID LANGUAGE            TASKNO PRIVILEGE
+--------- ------ --------------- ---------- -------------------------
+       134 chaudhary                      supriyo
+15-JUL-95 tipps  C++                     52 secret
+
+       896 jha                            ranjit
+15-JUN-97 kcw    java                    10 top secret
+
+       345 john                           peter
+15-NOV-99 tipps  java                    52
+
+
+     EMPNO LASTNAME                       FIRSTNAME
+---------- ------------------------------ ------------------------------
+HIREDATE  PROJID LANGUAGE            TASKNO PRIVILEGE
+--------- ------ --------------- ---------- -------------------------
+       563 anderson                       andy
+15-AUG-94 nitts  C++                     89 confidential
+
+
+7 rows selected.
+
+SQL> set linesize 120;
+SQL> select * from programmer;
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE             TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       201 gupta                          saurav                         01-JAN-95 npr    vb
+          52
+secret
+
+       390 ghosh                          pinky                          05-JAN-93 kcw    java
+          11
+top secret
+
+       789 agarwal                        praveen                        31-AUG-98 rnc    vb
+          11
+secret
+
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE             TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       134 chaudhary                      supriyo                        15-JUL-95 tipps  C++
+          52
+secret
+
+       896 jha                            ranjit                         15-JUN-97 kcw    java
+          10
+top secret
+
+       345 john                           peter                          15-NOV-99 tipps  java
+          52
+
+
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE             TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       563 anderson                       andy                           15-AUG-94 nitts  C++
+          89
+confidential
+
+
+7 rows selected.
+
+SQL> create table weather(city varchar(25), state varchar(25), high number(5), low number(5));
+
+Table created.
+
+SQL> desc weather;
+ Name                                                              Null?    Type
+ ----------------------------------------------------------------- -------- --------------------------------------------
+ CITY                                                                       VARCHAR2(25)
+ STATE                                                                      VARCHAR2(25)
+ HIGH                                                                       NUMBER(5)
+ LOW                                                                        NUMBER(5)
+
+SQL> insert into weather values('calcutta','west bengal',105,90);
+
+1 row created.
+
+SQL> insert into weather values('trivandrum','kerala',101,92);
+
+1 row created.
+
+SQL> insert into weather values('mumbai','maharashtra',88,69);
+
+1 row created.
+
+SQL> insert into weather values('bangalore','karnataka',77,60);
+
+1 row created.
+
+SQL> insert into weather values('new delhi','',80,72);
+
+1 row created.
+
+SQL> select * from weather;
+
+CITY                      STATE                           HIGH        LOW
+------------------------- ------------------------- ---------- ----------
+calcutta                  west bengal                      105         90
+trivandrum                kerala                           101         92
+mumbai                    maharashtra                       88         69
+bangalore                 karnataka                         77         60
+new delhi                                                   80         72
+
+SQL> create table books(bookid number(6) primary key, title varchar(10),
+  2  topicid varchar(10), publishername varchar(20), placeofpublication varchar(15),
+  3  price number(5),purchasedate date,shelfno varchar(6));
+
+Table created.
+
+SQL> insert into books values(8293,'dbms','db1','prentice hall','mumbai',255,'1-jan-95','s11');
+
+1 row created.
+
+SQL> insert into books values(5645,'dbms','db1','pearson education','mumbai',655,
+  2  '5-jan-93','s12');
+
+1 row created.
+
+SQL> insert into books values(6565,'c','c1','tmh','mumbai',840,'31-aug-98','s66');
+
+1 row created.
+
+SQL> insert into books values(6567,'C++','cplus1','abc publishers','delhi',300,
+  2  '15-jul-95','s77');
+
+1 row created.
+
+SQL> insert into books values(4576,'java','java1','guru govind publications',
+  2  'delhi',500,'15-jun-97','s87');
+insert into books values(4576,'java','java1','guru govind publications',
+                                             *
+ERROR at line 1:
+ORA-12899: value too large for column "SCOTT"."BOOKS"."PUBLISHERNAME" (actual: 24, maximum: 20)
+
+
+SQL> alter table books modify(publishername varchar(50));
+
+Table altered.
+
+SQL> insert into books values(4576,'java','java1','guru govind publications',
+  2  'delhi',500,'15-jun-97','s87');
+
+1 row created.
+
+SQL> insert into books values(3433,'oops','oops1','dave publishers','pune',600,
+  2  '15-nov-99','s56');
+
+1 row created.
+
+SQL> insert into books values(4655,'sad','sad1','sajan publications','cochin',
+  2  700,'15-aug-94','s76');
+
+1 row created.
+
+SQL> select * from books;
+
+    BOOKID TITLE      TOPICID    PUBLISHERNAME                                      PLACEOFPUBLICAT  PRICE PURCHASED
+---------- ---------- ---------- -------------------------------------------------- --------------- ---------- ---------
+SHELFN
+------
+      8293 dbms       db1        prentice hall                                      mumbai             255 01-JAN-95
+s11
+
+      5645 dbms       db1        pearson education                                  mumbai             655 05-JAN-93
+s12
+
+      6565 c          c1         tmh                                                mumbai             840 31-AUG-98
+s66
+
+
+    BOOKID TITLE      TOPICID    PUBLISHERNAME                                      PLACEOFPUBLICAT  PRICE PURCHASED
+---------- ---------- ---------- -------------------------------------------------- --------------- ---------- ---------
+SHELFN
+------
+      6567 C++        cplus1     abc publishers                                     delhi              300 15-JUL-95
+s77
+
+      4576 java       java1      guru govind publications                           delhi              500 15-JUN-97
+s87
+
+      3433 oops       oops1      dave publishers                                    pune               600 15-NOV-99
+s56
+
+
+    BOOKID TITLE      TOPICID    PUBLISHERNAME                                      PLACEOFPUBLICAT  PRICE PURCHASED
+---------- ---------- ---------- -------------------------------------------------- --------------- ---------- ---------
+SHELFN
+------
+      4655 sad        sad1       sajan publications                                 cochin             700 15-AUG-94
+s76
+
+
+7 rows selected.
+
+SQL> update programmer set projid = 'nitts' where empno = 201;
+
+1 row updated.
+
+SQL> update programmer set language = 'C++' where empno = 201;
+
+1 row updated.
+
+SQL> select * from programmer;
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE        TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       201 gupta                          saurav                         01-JAN-95 nitts  C++                         52
+secret
+
+       390 ghosh                          pinky                          05-JAN-93 kcw        java                    11
+top secret
+
+       789 agarwal                        praveen                        31-AUG-98 rnc        vb                      11
+secret
+
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE        TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       134 chaudhary                      supriyo                        15-JUL-95 tipps  C++                         52
+secret
+
+       896 jha                            ranjit                         15-JUN-97 kcw        java                    10
+top secret
+
+       345 john                           peter                          15-NOV-99 tipps  java                        52
+
+
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE        TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       563 anderson                       andy                           15-AUG-94 nitts  C++                         89
+confidential
+
+
+7 rows selected.
+
+SQL> update books set shelfno = 's10' where title = 'dbms';
+
+2 rows updated.
+
+SQL> delete from programmer where empno = 134;
+
+1 row deleted.
+
+SQL> select *from programmer;
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE        TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       201 gupta                          saurav                         01-JAN-95 nitts  C++                         52
+secret
+
+       390 ghosh                          pinky                          05-JAN-93 kcw        java                    11
+top secret
+
+       789 agarwal                        praveen                        31-AUG-98 rnc        vb                      11
+secret
+
+
+     EMPNO LASTNAME                       FIRSTNAME                      HIREDATE  PROJID LANGUAGE        TASKNO
+---------- ------------------------------ ------------------------------ --------- ------ --------------- ----------
+PRIVILEGE
+-------------------------
+       896 jha                            ranjit                         15-JUN-97 kcw        java                    10
+top secret
+
+       345 john                           peter                          15-NOV-99 tipps  java                        52
+
+
+       563 anderson                       andy                           15-AUG-94 nitts  C++                         89
+confidential
+
+
+6 rows selected.
+
+SQL> alter table weather add(natureofclimate varchar(20));
+
+Table altered.
+
+SQL> update weather set natureofclimate = 'cloudy' where city = 'calcutta';
+
+1 row updated.
+
+SQL> update weather set natureofclimate = 'rainy' where city = 'trivandrum';
+
+1 row updated.
+
+SQL> update weather set natureofclimate = 'rainy' where city = 'mumbai';
+
+1 row updated.
+
+SQL> update weather set natureofclimate = 'sunny' where city = 'bangalore';
+
+1 row updated.
+
+SQL> alter table programmer drop column taskno;
+
+Table altered.
+
+SQL> drop table weather;
+
+Table dropped.
+
+SQL> drop table weather;
+
+
+
+----------------------------------------------------------------x----------------------------------------------------------------------------------------
+
+SQL> create table supplier(supplierid number(2), sname varchar(15),
+  2
+SQL>
+SQL> create table supplier(supplierid number(2) primary key , sname varchar(15), scity varchar(20), sphone number(10), email varchar(50));
+
+Table created.
+
+SQL> insert into supplier values(1,'dilip','chennai',8999900000,'dilip@abc.co.in');
+
+1 row created.
+
+SQL> insert into supplier values(2,'tarun','madurai',8999911111,'tarun@xyz.com');
+
+1 row created.
+
+SQL> insert into supplier values(3,'naresh','coimbatore',8999922222,'g.naresh@xyzl.com');
+
+1 row created.
+
+SQL> insert into supplier values(4,'ganesan','trichy',8999933333,'Ganesan_83@ijk.com');
+
+1 row created.
+
+SQL> create table customer(custid number(4) primary key, fname varchar(30),lname varchar(30), address varchar(50), phoneno number(10) not null,city varchar(20), country
+ varchar(20),  datefirstpurchased date,
+  2  foreign key (supplierid) references supplier (supplierid));
+foreign key (supplierid) references supplier (supplierid))
+             *
+ERROR at line 2:
+ORA-00904: "SUPPLIERID": invalid identifier
+
+
+SQL> create table customer(custid number(4) primary key, fname varchar(30),lname varchar(30), address varchar(50), phoneno number(10) not null,city varchar(20), country
+varchar(20),datefirstpurchased date, foreign key(supplierid) references supplier(supplierid));
+create table customer(custid number(4) primary key, fname varchar(30),lname varchar(30), address varchar(50), phoneno number(10) not null,city varchar(20), countryvarch
+ar(20),datefirstpurchased date, foreign key(supplierid) references supplier(supplierid))
+
+  *
+ERROR at line 1:
+ORA-00902: invalid datatype
+
+
+SQL> create table customer(custid number(4) primary key,fname varchar(30),lname varchar(30),address varchar(50),phoneno number(10) not null,
+  2  city varchar(20),
+  3  country varchar(20),
+  4  datefirstpurchased date,
+  5  foreign key(supplierid) references supplier(supplierid));
+foreign key(supplierid) references supplier(supplierid))
+            *
+ERROR at line 5:
+ORA-00904: "SUPPLIERID": invalid identifier
+
+
+SQL> create table customer(custid number(4) primary key,fname varchar(30),lname varchar(30),address varchar(50),phoneno number(10) not null,
+  2  city varchar(20),
+  3  country varchar(20),
+  4  datefirstpurchased date,
+  5  supplierid int, foreign key(supplierid) references supplier(supplierid));
+
+Table created.
+
+SQL> insert into customer values(1001,'das','jeyaseelan','119,park avenue,II street',9841093428,'coimbatore','india','10-jan-04',1);
+
+1 row created.
+
+SQL> insert into customer values(2001,'gopi','govindraj','241,I floor,kamaraj street,madipakkam',9444124590,'chennai','india','25-mar-05',4);
+
+1 row created.
+
+SQL> insert into customer values(1201,'dilip','kishore','43,II avenue,anna nagar',9997234534,'bangalore','india','20-aug-04',2);
+
+1 row created.
+
+SQL> insert into customer values(1300,'aanand','chowdhury','42/1 sector 1,II street',9841054348,'bangalore','india','15-may-05',2);
+
+1 row created.
+
+SQL> insert into customer values(1220,'chandra','nagarajan','83,lal bagh',9841072356,'bangalore','india','12-feb-06',4);
+
+1 row created.
+
+SQL> insert into customer values(1221,'abhishek','kumar','13,kishori park',94447623901,'chennai','india','15-may-04',1);
+insert into customer values(1221,'abhishek','kumar','13,kishori park',94447623901,'chennai','india','15-may-04',1)
+                                                                      *
+ERROR at line 1:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+SQL>  alter table customer modify(phoneno number(11));
+
+Table altered.
+
+SQL>  insert into customer values(1221,'abhishek','kumar','13,kishori park',94447623901,'chennai','india','15-may-04',1);
+
+1 row created.
+
+SQL> insert into customer values(1320,'nikhil','pandit','218,alwaanya street',94448923091,'salem','india','21-apr-06',3);
+
+1 row created.
+
+SQL> insert into customer values(1222,'meenu','monica','c11,church road',98410563421,'trichy','india','30-aug-04',1);
+
+1 row created.
+
+SQL> insert into customer values(1225,'pavan','kumar','128/A,north mada street',99934782103,'madauri','india','18-aug-04',4);
+
+1 row created.
+
+SQL> create table items(itemid number(5) primary key,itemname varchar(35) not null,supplierid int,foreign key(supplierid) references supplier(supplierid),minqty number(
+5) not null,maxqty number(5) not null,price number(5,2));
+
+Table created.
+
+SQL> insert into items values(20,'pears soap',4,7,20,30);
+
+1 row created.
+
+SQL> insert into items values(21,'ponds powder',3,6,25,106);
+
+1 row created.
+
+SQL> insert into items values(22,'reynolds pen - blue',1,10,30,15);
+
+1 row created.
+
+SQL> insert into items values(23,'dove soap',4,7,15,85);
+
+1 row created.
+
+SQL> create table orders(orderid number(5) primary key,orderdate date,
+  2  custid number(4), foreign key(custid) references customer(custid),
+  3  quantity number(5) check (quantity>0),
+  4  itemid number(5), foreign key(itemid) references items(itemid));
+
+Table created.
+
+SQL> insert into orders(1,'12-jan-04',1001,30,25);
+insert into orders(1,'12-jan-04',1001,30,25)
+                   *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert into orders values(1,'12-jan-04',1001,30,25);
+insert into orders values(1,'12-jan-04',1001,30,25)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.SYS_C0011134) violated - parent key not found
+
+
+SQL> insert into orders values(1,'12-jan-04',1001,30,20);
+
+1 row created.
+
+SQL> insert into orders values(2,'6-may-05',1202,38,22);
+insert into orders values(2,'6-may-05',1202,38,22)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.SYS_C0011133) violated - parent key not found
+
+
+SQL> insert into orders values(2,'6-may-05',1201,38,22);
+
+1 row created.
+
+SQL> insert into orders values(3,'16-dec-06',1221,10,23);
+
+1 row created.
+
+SQL> insert into orders values(4,'21-may-04',1225,12,21);
+
+1 row created.
+
+SQL> select * from customer where city = 'chennai';
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+      2001 gopi                           govindraj
+241,I floor,kamaraj street,madipakkam              9444124590 chennai
+   india                25-MAR-05
+         4
+
+      1221 abhishek                       kumar
+13,kishori park                                    9.4448E+10 chennai
+   india                15-MAY-04
+         1
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+
+
+SQL> select * from items where supplierid = 2;
+
+no rows selected
+
+SQL> select * from customer where supplierid = 2;
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+      1201 dilip                          kishore
+43,II avenue,anna nagar                            9997234534 bangalore
+   india                20-AUG-04
+         2
+
+      1300 aanand                         chowdhury
+42/1 sector 1,II street                            9841054348 bangalore
+   india                15-MAY-05
+         2
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+
+
+SQL> select custid,fname,lname from customer where date>'31-jan-05';
+select custid,fname,lname from customer where date>'31-jan-05'
+                                              *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> select custid,fname,lname from customer where datefirstpurchase>'31-jan-05';
+select custid,fname,lname from customer where datefirstpurchase>'31-jan-05'
+                                              *
+ERROR at line 1:
+ORA-00904: "DATEFIRSTPURCHASE": invalid identifier
+
+
+SQL> select custid,fname,lname from customer where datefirstpurchased>'31-jan-05';
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+      2001 gopi                           govindraj
+      1300 aanand                         chowdhury
+      1220 chandra                        nagarajan
+      1320 nikhil                         pandit
+
+SQL> select * from supplier where scity='coimbatore';
+
+SUPPLIERID SNAME           SCITY                    SPHONE EMAIL
+---------- --------------- -------------------- ---------- --------------------------------------------------
+         3 naresh          coimbatore           8999922222 g.naresh@xyzl.com
+
+SQL> select * from supplier where sname like 'g%';
+
+SUPPLIERID SNAME           SCITY                    SPHONE EMAIL
+---------- --------------- -------------------- ---------- --------------------------------------------------
+         4 ganesan         trichy               8999933333 Ganesan_83@ijk.com
+
+SQL> select * from customer where lname not like '%e%';
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+      2001 gopi                           govindraj
+241,I floor,kamaraj street,madipakkam              9444124590 chennai
+   india                25-MAR-05
+         4
+
+      1300 aanand                         chowdhury
+42/1 sector 1,II street                            9841054348 bangalore
+   india                15-MAY-05
+         2
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+
+      1220 chandra                        nagarajan
+83,lal bagh                                        9841072356 bangalore
+   india                12-FEB-06
+         4
+
+      1221 abhishek                       kumar
+13,kishori park                                    9.4448E+10 chennai
+   india                15-MAY-04
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+         1
+
+      1320 nikhil                         pandit
+218,alwaanya street                                9.4449E+10 salem
+   india                21-APR-06
+         3
+
+      1222 meenu                          monica
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY
+   COUNTRY              DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+c11,church road                                    9.8411E+10 trichy
+   india                30-AUG-04
+         1
+
+      1225 pavan                          kumar
+128/A,north mada street                            9.9935E+10 madauri
+   india                18-AUG-04
+         4
+
+
+7 rows selected.
+
+SQL> select * from customer where datefirstpurchased>'31-dec-05' AND datefirstpurchased<1-jan-07' order by datefirstpurchased desc;
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> select * from customer where datefirstpurchased>'31-dec-05' AND datefirstpurchased<'1-jan-07' order by datefirstpurchased desc;
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY                 COUNTRY           DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+      1320 nikhil                         pandit
+218,alwaanya street                                9.4449E+10 salem                india             21-APR-06
+         3
+
+      1220 chandra                        nagarajan
+83,lal bagh                                        9841072356 bangalore            india             12-FEB-06
+         4
+
+    CUSTID FNAME                          LNAME
+---------- ------------------------------ ------------------------------
+ADDRESS                                               PHONENO CITY                 COUNTRY           DATEFIRST
+-------------------------------------------------- ---------- -------------------- -------------------- ---------
+SUPPLIERID
+----------
+
+
+SQL> select * from orders where quantity < 35;
+
+   ORDERID ORDERDATE     CUSTID   QUANTITY     ITEMID
+---------- --------- ---------- ---------- ----------
+         1 12-JAN-04       1001         30         20
+         3 16-DEC-06       1221         10         23
+         4 21-MAY-04       1225         12         21
+
+SQL> select * from items where supplier = 4;
+select * from items where supplier = 4
+                          *
+ERROR at line 1:
+ORA-00904: "SUPPLIER": invalid identifier
+
+
+SQL> select * from items where supplierid = 4;
+
+    ITEMID ITEMNAME                            SUPPLIERID     MINQTY     MAXQTY      PRICE
+---------- ----------------------------------- ---------- ---------- ---------- ----------
+        20 pears soap                                   4          7         20    30
+        23 dove soap                                    4          7         15    85
+
+SQL> select * from items where supplier id = 3 and minqty > 7 order by itemid;
+select * from items where supplier id = 3 and minqty > 7 order by itemid
+                                   *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> select * from items where supplierid = 3 and minqty > 7 order by itemid;
+
+no rows selected
+
+SQL> select * from items where supplierid = 4 and minqty > 7 order by itemid;
+
+no rows selected
+
+SQL> select * from items where (supplierid = 4 and minqty > 7) order by itemid;
+
+no rows selected
+
+SQL> select * from items where (supplierid = 4 and minqty > 3) order by itemid;
+
+    ITEMID ITEMNAME                            SUPPLIERID     MINQTY     MAXQTY      PRICE
+---------- ----------------------------------- ---------- ---------- ---------- ----------
+        20 pears soap                                   4          7         20         30
+        23 dove soap                                    4          7         15         85
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
