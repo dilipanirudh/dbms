@@ -1,28 +1,43 @@
-package deloittecore;
+package utils;
 
 public class Account {
-	private int accountnumber;
-	private String name;
-	public int getAccountnumber() {
-		return accountnumber;
+     private int accno;
+     private String custname;
+     private double balance;
+     
+     public Account(){
+    	 
+     }
+
+	public Account(int accno, String custname, double balance) {
+		super();
+		this.accno = accno;
+		this.custname = custname;
+		this.balance = balance;
 	}
-	public void setAccountnumber(int accountnumber) {
-		this.accountnumber = accountnumber;
+
+	public int getAccno() {
+		return accno;
 	}
-	public String getName() {
-		return name;
+
+	public void setAccno(int accno) {
+		this.accno = accno;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public String getCustname() {
+		return custname;
 	}
+
+	public void setCustname(String custname) {
+		this.custname = custname;
+	}
+
 	public double getBalance() {
 		return balance;
 	}
+
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	private double balance;
-	 
-	
-
+     
 }
